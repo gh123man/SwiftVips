@@ -34,10 +34,6 @@ let package = Package(
             name: "SwiftVips",
             dependencies: ["CVips", "VipsWrapper"]
         ),
-//        .executableTarget(
-//            name: "TestApp",
-//            dependencies: ["SwiftVips"]
-//        ),
         .testTarget(
             name: "SwiftVipsTests",
             dependencies: ["SwiftVips", "CVips"]),
