@@ -1,0 +1,5 @@
+
+module CVips [system] {
+    header "VipsWrapper.h"
+    export *
+}
