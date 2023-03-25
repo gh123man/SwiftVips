@@ -15,8 +15,6 @@ brew install vips pkg-config
 ### Ubuntu
 
 ```bash
-apt install libde265-dev -y 
-apt install libheif-dev -y 
 apt install libvips-dev -y 
 ```
 

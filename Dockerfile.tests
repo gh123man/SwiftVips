@@ -1,8 +1,6 @@
 FROM swift:5.7-jammy
 
 RUN apt update 
-RUN apt install libde265-dev -y
-RUN apt install libheif-dev -y
 RUN apt install libvips-dev -y
 
 COPY ./Package.* ./
