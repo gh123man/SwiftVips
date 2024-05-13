@@ -164,6 +164,19 @@ public class VImage {
         }
     }
     
+    public func autoRotate() throws {
+        var outputImagePtr: UnsafeMutablePointer<VipsImage>?
+        
+        if vips_autorot_wrapper(imagePtr, &outputImagePtr) != 0 {
+            throw VipsError(message: "Failed to autoRotate")
+        }
+        
+        if let outImage = outputImagePtr {
+            setImage(outImage)
+        }
+    }
+    
+    
     public func toJpeg(quality: Int32 = 100) throws -> Data {
         var outBuffer: UnsafeMutableRawPointer? = nil
         var outBufferSize = 0

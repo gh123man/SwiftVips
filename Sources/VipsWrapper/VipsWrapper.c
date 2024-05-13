@@ -7,9 +7,6 @@
 
 #include "VipsWrapper.h"
 
-void hello() {
-    printf("hi");
-}
 
 VipsImage *vips_image_new_from_buffer_wrapper(const void *buf, size_t len, const char *option_string) {
     return vips_image_new_from_buffer(buf, len, option_string, NULL);
@@ -37,4 +34,8 @@ int vips_jpegsave_buffer_wrapper(VipsImage *in, void **buf, size_t *len, gint qu
 
 int vips_pngsave_buffer_wrapper(VipsImage *in, void **buf, size_t *len, gint compression) {
     return vips_pngsave_buffer(in, buf, len, "compression", compression, NULL);
+}
+
+int vips_autorot_wrapper(VipsImage *in, VipsImage **out) {
+    return vips_autorot(in, out, NULL);
 }

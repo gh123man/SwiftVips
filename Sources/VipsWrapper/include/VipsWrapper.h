@@ -20,5 +20,6 @@ int vips_unpremultiply_wrapper(VipsImage *in, VipsImage **out);
 int vips_cast_wrapper(VipsImage *in, VipsImage **out, VipsBandFormat bandFormat);
 int vips_jpegsave_buffer_wrapper(VipsImage *in, void **buf, size_t *len, gint quality);
 int vips_pngsave_buffer_wrapper(VipsImage *in, void **buf, size_t *len, gint compression);
+int vips_autorot_wrapper(VipsImage *in, VipsImage **out);
 
 #endif /* VipsWrapper_h */
